@@ -13,17 +13,22 @@ class Particle {
   void run() {
     update();
     display();
+    popMatrix();
   }
 
   // Method to update location
   void update() {
     velocity.add(acceleration);
     location.add(velocity);
+    
+    pushMatrix();
+    translate(location.x, location.y);
+    rotate(velocity.heading() - (float)1/2*PI - 0.3);
   }
 
   // Method to display
   void display() {
-    image(img1,location.x,location.y,40,40);
+    image(img1,0,0,40,40);
   }
   
   // Is the particle still useful?
