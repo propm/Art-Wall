@@ -19,8 +19,11 @@ void setup() {
   
   ps = new ParticleSystem(new PVector(random(width * 2),-100));
   
+  img1.resize(40, 40);
+  img2.resize(640, 360);
+  
   offscreen.beginDraw();
-  offscreen.image(img2,0,0,640,360);
+  offscreen.image(img2,0,0);
   offscreen.endDraw();
 }
 

@@ -28,7 +28,7 @@ class Particle {
 
   // Method to display
   void display() {
-    image(img1,0,0,40,40);
+    image(img1,0,0);
   }
   
   // Is the particle still useful?

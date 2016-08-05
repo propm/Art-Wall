@@ -16,9 +16,12 @@ void setup() {
   ks = new Keystone(this);
   surface = ks.createCornerPinSurface(640, 360, 60);
   offscreen = createGraphics(640, 360, P3D);
+  
+  img1.resize(15, 15);
+  img2.resize(640, 360);
 
   offscreen.beginDraw();
-  offscreen.image(img2,0,0,640,360);
+  offscreen.image(img2,0,0);
   offscreen.endDraw();
   
   ps = new ParticleSystem(new PVector(random(width * 2),-100));
