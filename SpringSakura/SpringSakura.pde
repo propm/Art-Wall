@@ -18,14 +18,14 @@ void setup() {
   offscreen = createGraphics(640, 360, P3D);
   
   ps = new ParticleSystem(new PVector(random(width * 2),-100));
-}
-
-void draw() {
-  background(0);
   
   offscreen.beginDraw();
   offscreen.image(img2,0,0,640,360);
   offscreen.endDraw();
+}
+
+void draw() {
+  background(0);
   
   surface.render(offscreen);
   
